@@ -4,6 +4,7 @@ import About from './About';
 import Home from './Home';
 import Profile from './Profile'
 import Profiles from './Profiles'
+import Mobx from './Mobx'
 
 const App = () => {
   const [message, setMessage] = useState({
@@ -50,7 +51,7 @@ const App = () => {
           <Link to={"/profile/" + message.name}>누구</Link>
         </li>
         <li>
-          <Link to={"/profiles/"}>프로필2</Link>
+          <Link to={"/Mobx/"}>mobx</Link>
         </li>
       </ul>
       <hr />
@@ -60,6 +61,7 @@ const App = () => {
       <Route path="/profiles" component={Profiles} />
       <input type="text" name="name" placeholder="파라미터 변경" value={message.name} onChange={onChange} />
       <input type="text" name="istrue" placeholder="쿼리 변경" value={message.istrue} onChange={onChange} />
+      <Route path="/Mobx" component={Mobx} />
     </div>
 
   )
